@@ -4,6 +4,7 @@ import { AVATARS, ROLES } from '../game/content'
 import { playIf } from '../game/audio'
 import { useGame } from '../game/store'
 import type { AvatarId } from '../game/types'
+import schoolLogo from '../assets/school-logo.png'
 
 export function TeamSetup() {
   const { state, dispatch } = useGame()
@@ -27,6 +28,7 @@ export function TeamSetup() {
       <div className="setup-grid-bg" aria-hidden="true" />
       <div className="setup-shell">
         <header className="setup-head">
+          <img src={schoolLogo} alt="School logo" className="setup-logo" />
           <div className="setup-badge">
             <ShieldCheck size={18} /> CLEARANCE GRANTED · TEAM REGISTRATION
           </div>

@@ -30,6 +30,7 @@ import { AVATARS, MISSIONS, TEACHER_CLUES, TEACHER_PIN } from '../game/content'
 import { playIf } from '../game/audio'
 import { formatTime, useGame } from '../game/store'
 import type { AvatarId } from '../game/types'
+import schoolLogo from '../assets/school-logo.png'
 
 interface TeacherPanelProps {
   open: boolean
@@ -117,6 +118,7 @@ export function TeacherPanel({ open, onClose, isFullscreen, onToggleFullscreen }
       <aside className="teacher-panel" role="dialog" aria-modal="true" aria-label="Teacher control panel">
         <header className="teacher-head">
           <div>
+            <img src={schoolLogo} alt="School logo" className="teacher-logo" />
             <span className="eyebrow">
               <Settings size={14} /> CLASSROOM CONTROL
             </span>

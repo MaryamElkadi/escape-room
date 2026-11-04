@@ -13,6 +13,7 @@ import { AVATARS, FINAL_PASSWORD, MISSIONS } from '../game/content'
 import { playIf } from '../game/audio'
 import { formatTime, useGame } from '../game/store'
 import { Confetti, Modal } from './ui'
+import schoolLogo from '../assets/school-logo.png'
 
 export function Victory({
   onTeacher,
@@ -40,6 +41,7 @@ export function Victory({
       <div className="victory-glow" aria-hidden="true" />
 
       <div className="victory-shell">
+        <img src={schoolLogo} alt="School logo" className="victory-logo" />
         <div className="victory-kicker">
           <CheckCircle2 size={18} /> RECOVERY COMPLETE · 4/4 DATA FRAGMENTS
         </div>

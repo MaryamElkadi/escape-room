@@ -12,6 +12,7 @@ import {
 import { AVATARS, MISSIONS } from '../game/content'
 import { formatTime, useGame } from '../game/store'
 import { playIf } from '../game/audio'
+import schoolLogo from '../assets/school-logo.png'
 
 interface HudProps {
   onTeacher: () => void
@@ -37,6 +38,7 @@ export function Hud({ onTeacher, onScoreboard, onRules, onToggleFullscreen, isFu
   return (
     <header className="hud">
       <button type="button" className="hud-brand" onClick={goHome} title="Return to mission control">
+        <img src={schoolLogo} alt="School logo" className="school-logo" />
         <span className="brand-badge">
           <span className="brand-pulse" />
           XL

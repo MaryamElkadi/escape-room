@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { AlertTriangle, ArrowRight, Database, Radio, ShieldAlert, Terminal } from 'lucide-react'
 import { useGame } from '../game/store'
 import { playIf } from '../game/audio'
+import schoolLogo from '../assets/school-logo.png'
 
 const ALERTS = ['SYSTEM BREACH DETECTED', 'SCHOOL DATABASE LOCKED', 'DATA RECOVERY REQUIRED']
 
@@ -51,6 +52,7 @@ export function Intro() {
       </button>
 
       <main className="intro-main">
+        <img src={schoolLogo} alt="School logo" className="intro-logo" />
         <div className={`intro-kicker ${step >= 1 ? 'show' : ''}`}>
           <ShieldAlert size={18} />
           <span>SECURITY ALERT · PRIORITY RED</span>

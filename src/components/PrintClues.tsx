@@ -1,10 +1,12 @@
 import { FINAL_PASSWORD, TEACHER_CLUES } from '../game/content'
+import schoolLogo from '../assets/school-logo.png'
 
 export function PrintClues() {
   return (
     <div className="print-only" aria-hidden="true">
       <header className="print-head">
         <div>
+          <img src={schoolLogo} alt="School logo" className="print-logo" />
           <h1>EXCEL ESCAPE ROOM · THE MISSING DATA</h1>
           <p>Primary 6 · Printable station clue cards · Cut along the dashed lines.</p>
         </div>
